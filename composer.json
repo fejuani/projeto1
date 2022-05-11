@@ -1,0 +1,10 @@
+{
+    "name": "guilherme/projeto_php",
+    "autoload": {
+        "psr-4": {
+            "Guilherme\\ProjetoPhp\\": "src/"
+        }
+    },
+    "require": {}
+    
+}
