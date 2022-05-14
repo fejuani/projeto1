@@ -1,3 +1,67 @@
-section#home{
-    background-color: rgb(206, 200, 122);
+*{
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Abel', sans-serif;
+    
+}
+div#logo>img{
+    width: 50%;
+    
+}
+.sidebar .logo_content .logo{
+    display: flex;
+    height: 50px;
+    width:100% ;
+
+}
+body{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+.sidebar{
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    background: rgba(199, 177, 143);
+    top: 0;
+    left: 0;
+    padding:  6px 10px;
+    font-size: 40px;
+}
+#artesanatos{
+    background: rgba(199, 177, 143, 0.5);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 5vw;
+    border-radius: 20px;
+    font-size: 28px;
+}
+.img-exemplo{
+    background: rgb(230, 219, 219);
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    margin: o 1.5%;
+    margin-left: 35px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    height: 350px;
+    width: 20%;
+    transition: 1s;
+    margin-left: 4%;
+}
+
+.teste{
+    width: 75%;
+    height: 75%;
 }
