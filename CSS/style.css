@@ -6,16 +6,6 @@
     font-family: 'Abel', sans-serif;
     
 }
-div#logo>img{
-    width: 50%;
-    
-}
-.sidebar .logo_content .logo{
-    display: flex;
-    height: 50px;
-    width:100% ;
-
-}
 body{
     position: relative;
     min-height: 100vh;
@@ -24,13 +14,134 @@ body{
 }
 .sidebar{
     height: 100%;
-    width: 250px;
+    width: 275px;
     position: fixed;
     background: rgba(199, 177, 143);
     top: 0;
     left: 0;
     padding:  6px 10px;
-    font-size: 40px;
+}
+
+.sidebar .logo_content .logo{
+    display: flex;
+    height: 50px;
+    width:100% ;
+    align-items: center;
+}
+.logo_content .logo .img_logo{
+    font-size: 28px;
+    margin-right: 10px;
+    width: 40%;
+}
+.logo_content .logo .logo_name{
+    font-size: 30px;
+}
+.sidebar #btn{
+    position: absolute;
+    font-size: 35px;
+    left: 85%;
+    height: 50px;
+    width: 50px;
+    top: 6px;
+    line-height: 55px;
+  
+}
+.sidebar ul{
+    margin-top: 20px;
+    font-size: 20px;
+    
+}
+.sidebar ul li{
+    height: 50px;
+    width: 100%;
+    list-style: none;
+    position: relative;
+    margin: 20px 5px;
+    line-height: 40px;
+}
+
+.sidebar ul li a{
+    color: black;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 25px;
+    transition: all 1;
+    border-radius: 12px;
+}
+.sidebar ul li a:hover{
+    color:white;
+    background-color: rgb(204,162,102);
+
+}
+.sidebar ul li input{
+    height: 100%;
+    width: 100%;
+    position:absolute;
+    border-radius: 6px;
+    left: 0;
+    top: 0;
+    outline: none;
+    border: none;
+    padding-left: 50px;
+    font-size: 18px; 
+
+}
+.sidebar ul li .bx-search-alt-2{
+    position: absolute;
+    z-index:99 ;
+    font-size: 25px;
+    left: 0;
+
+}
+.sidebar ul li i{
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+    text-align: center;
+}
+.sidebar .profile_content{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 25px;
+    width: 100%;
+}
+.sidebar .profile_content .profile{
+    position: relative;
+    padding: 10px 6px;
+    height: 80px;
+    background: rgba(204, 162, 102, 0.521);
+}
+.sidebar .profile_content .profile .profile_details{
+    display: flex;
+    align-items: center;
+}
+.profile .profile_details img{
+    height: 25%;
+    width: 25%;
+    border-radius: 50px;
+}
+.profile .profile_details .name_job{
+    margin-left: 10px;
+}
+.profile .profile_details .name_people{
+    font-size: 25px;
+    font-weight: 400;
+}
+.profile .profile_details .job{
+    font-size: 20px;
+}
+.profile .bx-log-out{
+    position: absolute;
+    left: 88%;
+    bottom: 5px;
+    transform: translateX(-50%);
+    min-width: 50px;
+    line-height: 50px;
+    font-size: 25px;
+    border-radius: 12px;
 }
 #artesanatos{
     background: rgba(199, 177, 143, 0.5);

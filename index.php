@@ -11,23 +11,22 @@
     <link rel="shortcut icon" href="img/logo_black.png" type="image/x-icon"/>
     <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-
     <title>SmallArt</title>
 
 </head>
 <body>
     <div class="sidebar">
         <div class="logo_content">
-            <div id="logo">
+            <div class="logo">
                 <img src="img/logo.png" alt="SmallArt" class="img_logo">
-                <div >SmallArt</div>
+                <div class="logo_name" >SmallArt</div>
             </div>
-            <i class='bx bx-menu' id="btn"></i>
         </div>
+        <i class='bx bx-menu' id="btn"></i>
         <ul class="btn">
             <li>
-                <i class='bx bx-search-alt-2' ></i>
-                <input type="text" placeholder="Pesquisar">
+                <i class='bx bx-search-alt-2'></i>
+                <input type="text" placeholder="Pesquisar...">
             </li>       
             <li>
                 <a href="login.php">
@@ -54,6 +53,18 @@
                 </a>
             </li>
         </ul>
+        <div class="profile_content">
+            <div class="profile">
+                <div class="profile_details">
+                    <img src="img/profile_pic.jpeg" alt="foto de cadastro">
+                        <div class="name_job">
+                            <div class="name_people">João Gabriel</div>
+                            <div class="job">Web Designer</div>
+                        </div>
+                        <i class='bx bx-log-out'></i>
+                </div>
+            </div>
+        </div>
     </div>
     <div>
         <ul id="artesanatos">
