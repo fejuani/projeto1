@@ -20,40 +20,45 @@
             </div>
         </div>
         <i class='bx bx-menu' id="btn"></i>
-        <ul class="btn">
+        <ul class="nav_list">
             <li>
-                <i class='bx bx-search-alt-2' ></i>
+                <i class='bx bx-search-alt-2'></i>
                 <input type="text" placeholder="Pesquisar...">
+                <span class="negocio">Pesquisar</span>
             </li>       
             <li>
                 <a href="login.php">
                     <i class='bx bx-log-in' ></i>
-                    <span class="login">Login</span>
+                    <span class="links_name">Login</span>
                 </a>
+                <span class="negocio">Login</span>
             </li>
             <li>
                 <a href="index.php">
                     <i class='bx bxs-home-smile' ></i>
-                    <span class="home">Página inicial</span>
+                    <span class="links_name">home</span>
                 </a>
+                <span class="negocio">home</span>
             </li>
             <li>
                 <a href="categoria.html">
                     <i class='bx bxs-category' ></i>
-                    <span class="Categoria">Categorias</span>
+                    <span class="links_name">Categorias</span>
                 </a>
+                <span class="negocio">Categorias</span>
             </li>
             <li>
                 <a href="sobre.html">
                     <i class='bx bxs-group'></i>
-                    <span class="sobre">Sobre Nós</span>
+                    <span class="links_name">Sobre</span>
                 </a>
+                <span class="negocio">Sobre Nós</span>
             </li>
         </ul>
         <div class="profile_content">
             <div class="profile">
                 <div class="profile_details">
-                    <img src="img/profile_pic.jpeg" alt="foto de cadastro"> 
+                    <img src="img/profile_pic.jpeg" alt="foto de cadastro">
                         <div class="name_job">
                             <div class="name_people">João Gabriel</div>
                             <div class="job">Web Designer</div>
@@ -62,7 +67,19 @@
                 </div>
             </div>
         </div>
-    </div>
-    </div>
+        </div>
+    <div>
+        <script>
+            let btn = document.querySelector("#btn");
+            let sidebar = document.querySelector(".sidebar");
+            let searchbtn = document.querySelector(".bx-search-alt-2");
+    
+            btn.onclick = function(){
+                sidebar.classList.toggle("active");
+            }
+            searchbtn.onclick = function(){
+                sidebar.classList.toggle("active");
+            }
+        </script>
 </body>
 </html>
