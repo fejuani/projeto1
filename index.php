@@ -30,7 +30,7 @@
                 <span class="negocio">Pesquisar</span>
             </li>       
             <li>
-                <a href="login.php">
+                <a href="src/View/form_add_client.php">
                     <i class='bx bx-log-in' ></i>
                     <span class="links_name">Login</span>
                 </a>
@@ -44,11 +44,11 @@
                 <span class="negocio">home</span>
             </li>
             <li>
-                <a href="categoria.html">
+                <a href="src/Controller/Client.php?operation=findall">
                     <i class='bx bxs-category' ></i>
-                    <span class="links_name">Categorias</span>
+                    <span class="links_name">listar usuários</span>
                 </a>
-                <span class="negocio">Categorias</span>
+                <span class="negocio">listar usuários</span>
             </li>
             <li>
                 <a href="sobre.html">
@@ -71,50 +71,7 @@
             </div>
         </div>
     </div>
-    <div>
-        <ul id="artesanatos">
-            <li class="img-exemplo">
-            <img class="teste" src="img/img-exemplo.png" alt="Bolsa feita artesanalmente">
-            <p>Bolsa feita artesanalmente</p>
-            <p>R$ 34,00</p>
-            </li>
-            <li class="img-exemplo">
-            <img class="teste" src="img/img-exemplo.png" alt="Bolsa feita artesanalmente">
-            <p>Bolsa feita artesanalmente</p>
-            <p>R$ 34,00</p>
-            </li>
-            <li class="img-exemplo">
-            <img class="teste" src="img/img-exemplo.png" alt="Bolsa feita artesanalmente">
-            <p>Bolsa feita artesanalmente</p>
-            <p>R$ 34,00</p>
-            </li>
-            <li class="img-exemplo">
-            <img class="teste" src="img/img-exemplo.png" alt="Bolsa feita artesanalmente">
-            <p>Bolsa feita artesanalmente</p>
-            <p>R$ 34,00</p>
-            </li>
-            <li class="img-exemplo">
-            <img class="teste" src="img/img-exemplo.png" alt="Bolsa feita artesanalmente">
-            <p>Bolsa feita artesanalmente</p>
-            <p>R$ 34,00</p>
-            </li>
-            <li class="img-exemplo">
-            <img class="teste" src="img/img-exemplo.png" alt="Bolsa feita artesanalmente">
-            <p>Bolsa feita artesanalmente</p>
-            <p>R$ 34,00</p>
-            </li>
-            <li class="img-exemplo">
-            <img class="teste" src="img/img-exemplo.png" alt="Bolsa feita artesanalmente">
-            <p>Bolsa feita artesanalmente</p>
-            <p>R$ 34,00</p>
-            </li>
-            <li class="img-exemplo">
-            <img class="teste" src="img/img-exemplo.png" alt="Bolsa feita artesanalmente">
-            <p>Bolsa feita artesanalmente</p>
-            <p>R$ 34,00</p>
-            </li>
-        </ul>
-    </div>
+
     <script>
         let btn = document.querySelector("#btn");
         let sidebar = document.querySelector(".sidebar");

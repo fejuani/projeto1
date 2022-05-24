@@ -2,8 +2,11 @@
     "name": "guilherme/projeto_php",
     "autoload": {
         "psr-4": {
-            "Guilherme\\ProjetoPhp\\": "src/"
-        }
+            "APP\\": "src/"
+        },    
+        "files": [
+            "Config.php"
+          ]
     },
     "require": {}
     
