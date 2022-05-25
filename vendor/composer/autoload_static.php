@@ -11,6 +11,10 @@ class ComposerStaticInit14ef3ef22abba73db18dc49dcb2d1e5c
     );
 
     public static $prefixLengthsPsr4 = array (
+        'C' => 
+        array (
+            'CoffeeCode\\Uploader\\' => 20,
+        ),
         'A' => 
         array (
             'APP\\' => 4,
@@ -18,6 +22,10 @@ class ComposerStaticInit14ef3ef22abba73db18dc49dcb2d1e5c
     );
 
     public static $prefixDirsPsr4 = array (
+        'CoffeeCode\\Uploader\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/coffeecode/uploader/src',
+        ),
         'APP\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',

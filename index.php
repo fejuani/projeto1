@@ -44,11 +44,11 @@
                 <span class="negocio">home</span>
             </li>
             <li>
-                <a href="src/Controller/Client.php?operation=findall">
+                <a href="categoria.html">
                     <i class='bx bxs-category' ></i>
-                    <span class="links_name">listar usuários</span>
+                    <span class="links_name">Categorias</span>
                 </a>
-                <span class="negocio">listar usuários</span>
+                <span class="negocio">Categorias</span>
             </li>
             <li>
                 <a href="sobre.html">
@@ -57,17 +57,19 @@
                 </a>
                 <span class="negocio">Sobre Nós</span>
             </li>
+            <li>
+                <a href="sobre.html">
+                    <i class='bx bxs-user'></i>
+                    <span class="links_name">Sua Conta</span>
+                </a>
+                <span class="negocio">Sua Conta</span>
+            </li>
         </ul>
         <div class="profile_content">
             <div class="profile">
-                <div class="profile_details">
-                    <img src="img/profile_pic.jpeg" alt="foto de cadastro">
-                        <div class="name_job">
-                            <div class="name_people">João Gabriel</div>
-                            <div class="job">Web Designer</div>
-                        </div>
-                </div>
-                <i class='bx bx-log-out' id="log_out"></i>
+                <a href="src/Controller/Client.php?operation=findall">
+                <i class='bx bx-log-out'></i>
+                </a>
             </div>
         </div>
     </div>

@@ -8,6 +8,8 @@
             "Config.php"
           ]
     },
-    "require": {}
+    "require": {
+        "coffeecode/uploader": "^2.0"
+    }
     
 }

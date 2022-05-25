@@ -9,14 +9,16 @@ class Client
     private string $phone;
     private string $email;
     private bool $active;
+    private string $password;
 
-    public function __construct(string $name, string $phone, string $email, int $id=0)
+    public function __construct(string $name, string $phone, string $email, string $password,int $id=0)
     {
         $this->id = $id;
         $this->name = $name;
         $this->phone = $phone;
         $this->email = $email;
         $this->active = true;
+        $this->password = $password;
     }
 
     // Getter

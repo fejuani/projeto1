@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -12,7 +13,6 @@
     <link rel="shortcut icon" href="img/logo_black.png" type="image/x-icon"/>
     <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-    <title>Login</title>
     <style>
         .form{
             background: rgb(219, 196, 162);
@@ -27,19 +27,20 @@
 
 <body>
     <main class="container" >
-        <center><h1>CADASTRE-SE</h1></center>
-        <form action="../Controller/Client.php?operation=insert" method="POST" class="form">
+        <div class="d-flex justify-content-center"><h1>SUA CONTA</h1></div>
+        <form action="../Controller/Client.php?operation=update" method="POST" class="form">
+            <input type="hidden" id="code" name="code" value="<?= $_SESSION["client_data"]["id_client"] ?>">
             <section class="row">
                 <article class="col-12 col-md-4">
                     <div class="mb-3">
                         <label for="name" class="form-label" >Nome completo</label>
-                        <input type="text" id="name" name="name" class="form-control" placeholder="Nome">
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Nome" value="<?= $_SESSION["client_data"]["name"] ?>">
                     </div>
                 </article>
                 <article class="col-12 col-md-4">
                     <div class="mb-3">
                         <label for="phone" class="form-label">Telefone</label>
-                        <input type="tel" id="phone" name="phone" class="form-control" placeholder="(51)XXXXX-XXXX">
+                        <input type="tel" id="phone" name="phone" class="form-control" placeholder="(51)XXXXX-XXXX"  value="<?= $_SESSION["client_data"]["phone"] ?>">
                     </div>
                 </article>
                 <article class="col-12 col-md-4">
@@ -51,14 +52,14 @@
                 <article class="col-12 col-md-12">
                 <div class="mb-3">
                         <center><label for="email" class="form-label">Email</label></center>
-                        <input type="email" id="email" name="email" class="form-control" placeholder="email@gmail.com">
+                        <input type="email" id="email" name="email" class="form-control" placeholder="email@gmail.com" value="<?= $_SESSION["client_data"]["email"] ?>">
                     </div>
                 </article>
             </section>
             <section class="row">
                 <article class="col-12">
                     <div class="d-flex justify-content-center">
-                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+                        <button type="submit" class="btn btn-primary">SALVAR</button>
                     </div>
                 </article>
                 <a href="../../index.php" class="">Voltar</a>

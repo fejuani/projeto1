@@ -31,4 +31,29 @@ class ClientDAO
         $stmt = $connection->query($sql);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    public static function findClient(int $id)
+    {
+        $connection = Connection:: getConnection();
+        $stmt = $connection->query("select * from client where id_client=$id");
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+    public static function update(Client $client)
+    {
+        $connection = Connection::getConnection();
+        $stmt = $connection->prepare("update client set name=?, phone=?, email=? where id_client=?");
+        $stmt->bindparam(1, $client->name,PDO::PARAM_STR);
+        $stmt->bindparam(2, $client->phone,PDO::PARAM_STR);
+        $stmt->bindparam(3, $client->email,PDO::PARAM_STR);
+        $stmt->bindparam(4, $client->id,PDO::PARAM_INT);
+        return $stmt->execute();
+    }
+    public static function loginClient(string $email, string $password)
+    {
+        $connection = Connection:: getConnection();
+        $stmt = $connection->query("select * from client where email=? and password=?");
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
 }
+
+

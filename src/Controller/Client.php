@@ -24,15 +24,23 @@ switch ($_GET["operation"]) {
         insertClient();
         break;
     case "update":
-        // updateClient();
+        updateClient();
         break;
-    case "remove":
-        removeClient();
+    case "edit":
+        editClient();
         break;
-    case "findall":
-        findAllUsers();
+
     default:
         Uteis::redirect("Operação inválida!!!");
+}
+switch($_GET["exit"]){
+    case "login":
+        loginClient();
+        break;
+    case "logout":
+        logoutClient();
+        break;
+
 }
 
 function insertClient()
@@ -40,6 +48,8 @@ function insertClient()
     $name = $_POST["name"];
     $phone = $_POST["phone"];
     $email = $_POST["email"];
+    $password = $_POST["password"];
+
 
     $error = array();
 
@@ -54,12 +64,15 @@ function insertClient()
     if (!Validation::validatePhone($phone)) {
         array_push($error, "Telefone inválido!!!");
     }
+    if (!Validation::validatePassword($password)) {
+        array_push($error, "Senha inválida!!!");
+    }
 
     // Se existir algum erro, faça o IF
     if (count($error) > 0) {
         Uteis::redirect(message: $error, session_name: "msg_validation_erro");
     } else {
-        $client = new Client($name, $phone, $email);
+        $client = new Client($name, $phone, $email, $password);
         // Salvaria no banco de dados
         $result = ClientDAO::insertClient($client);
         if ($result) {
@@ -69,27 +82,73 @@ function insertClient()
         }
     }
 }
-function removeClient()
+function loginClient($email, $password)
 {
-    if (empty($_GET["codigo"])) {
-        Uteis::redirect("Código não localizado!!!");
+    if(!Validation::validateEmail($_POST["email"])){
+        array_push($error, "Email do usuário inválido");
     }
-    if (!Validation::validateId($_GET["codigo"])) {
-        Uteis::redirect("O código informado é inválido!!!");
+
+    if(!Validation::validatePassword($_POST["password"])){
+        array_push($error, "Senha do usuário inválido");
     }
-    $result = ClientDAO::deleteClient($_GET["codigo"]);
-    if ($result) {
-        Uteis::redirect(message: "Usuário removido com sucesso!!!", session_name: "msg_confirm");
-    } else {
-        Uteis::redirect("Não foi possível remover o usuário!!!");
+
+        // if (count($error) > 0) {
+        // Uteis::redirect(message: $error, session_name: "msg_validation_erro");} 
+        // else {
+        //     $client = new Client($name, $phone, $email, $password);
+        //     // Salvaria no banco de dados
+        //       $result = ClientDAO::insertClient($client);
+        // }
+}
+function logoutClient()
+{
+
+}
+
+function editClient()
+{
+    if(!Validation::validateId($_GET["codigo"])){
+        Uteis::redirect("Código do usuário inválido");
+    }
+    $client = ClientDAO::findClient($_GET["codigo"]);
+    if($client){
+        Uteis::redirect(message: $client, session_name:"client_data", url:"../View/form_edit_client.php");
+    }else{
+        Uteis::redirect("Cliente não localizado");
     }
 }
-function findAllUsers()
+function updateClient()
 {
-    $clients = ClientDAO::findAll();
-    if ($clients) {
-        Uteis::redirect($clients, session_name: "list_of_users", url: "../View/list_users.php");
-    } else {
-        Uteis::redirect("Nenhum usuário cadastrado no sistema");
+    $error = array();
+    if(!Validation::validateId($_POST["code"]));{
+        array_push($error, "Código do usuário inválido");
+
+    }
+    if(!Validation::validateName($_POST["name"])){
+        array_push($error, "Nome do usuário inválido"); 
+    }
+    if(!Validation::validateEmail($_POST["email"])){
+        array_push($error, "Email do usuário inválido");
+    }
+    if(!Validation::validatePhone($_POST["phone"])){
+        array_push($error, "Telefone do usuário inválido");
+    }
+    if(!Validation::validatePassword($_POST["password"])){
+        array_push($error, "Senha do usuário inválido");
+    }
+    $client = new Client(
+        id: $_POST["code"],
+        name: $_POST["name"],
+        phone: $_POST["phone"],
+        email: $_POST["email"],
+        password: $_POST["password"]
+    );
+    $result = ClientDAO::update($client);
+
+    if($result){
+        Uteis::redirect(message: "Cliente atualizado com sucesso", session_name:"msg_confirm");
+    }else{
+        uteis::redirect("Não foi possivel atualizar a conta");
     }
 }
+

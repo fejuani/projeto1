@@ -22,4 +22,9 @@ class Validation
     {
         return filter_var($email, FILTER_VALIDATE_EMAIL);
     }
+    public static function validatePassword(string $password)
+    {
+        return strlen($password) > 6 ;
+    }
 }
+

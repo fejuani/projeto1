@@ -223,7 +223,7 @@ body{
     text-align: center;
 }
 .sidebar.active .bx-log-out{
-    left: 88%;
+    left: 50%;
 }
 #artesanatos{
     background: rgba(199, 177, 143, 0.5);
@@ -254,10 +254,21 @@ body{
     margin-left: 4%;
 }
 
+
+
+
+
+
 .teste{
     width: 75%;
     height: 75%;
 }
+
+
+
+
+
+
 .bxs-home-smile{
     padding-left: 8px;
 }
@@ -269,4 +280,14 @@ body{
 }
 .bxs-group{
     padding-left: 12px;
+}
+.bxs-user{
+    padding-left: 8px ;
+}
+
+
+
+
+.bx-log-out{
+    
 }
