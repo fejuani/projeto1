@@ -46,7 +46,7 @@
         </div>
     <?php endif;
     unset($_SESSION["msg_error"]) ?>
-    <a href="../../index.php">Voltar</a>
+    <a href="form_add_client.php">Voltar</a>
 </body>
 
 </html>

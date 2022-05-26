@@ -58,7 +58,7 @@
                 <span class="negocio">Sobre Nós</span>
             </li>
             <li>
-                <a href="sobre.html">
+                <a href="src/View/count_user.php">
                     <i class='bx bxs-user'></i>
                     <span class="links_name">Sua Conta</span>
                 </a>
@@ -67,7 +67,7 @@
         </ul>
         <div class="profile_content">
             <div class="profile">
-                <a href="src/Controller/Client.php?operation=findall">
+                <a href="src/Model/images.php">
                 <i class='bx bx-log-out'></i>
                 </a>
             </div>
@@ -85,6 +85,7 @@
         searchbtn.onclick = function(){
             sidebar.classList.toggle("active");
         }
+
     </script>
 
     <footer>

@@ -35,7 +35,7 @@ switch ($_GET["operation"]) {
 }
 switch($_GET["exit"]){
     case "login":
-        loginClient();
+        loginClient($email, $password);
         break;
     case "logout":
         logoutClient();
@@ -92,12 +92,25 @@ function loginClient($email, $password)
         array_push($error, "Senha do usuário inválido");
     }
 
+        if (count($error) > 0) {
+        Uteis::redirect(message: $error, session_name: "msg_validation_erro");} 
+        else {
+             $client = new Client($email, $password);
+             // Salvaria no banco de dados
+               //$result = ClientDAO::insertClient($client);
+     }
+
         // if (count($error) > 0) {
-        // Uteis::redirect(message: $error, session_name: "msg_validation_erro");} 
-        // else {
+        //     Uteis::redirect(message: $error, session_name: "msg_validation_erro");
+        // } else {
         //     $client = new Client($name, $phone, $email, $password);
         //     // Salvaria no banco de dados
-        //       $result = ClientDAO::insertClient($client);
+        //     $result = ClientDAO::insertClient($client);
+        //     if ($result) {
+        //         Uteis::redirect(message: "Usuário cadastrado com sucesso!!!", session_name: "msg_confirm");
+        //     } else {
+        //         Uteis::redirect("Não foi possível cadastrar o cliente!!!");
+        //     }
         // }
 }
 function logoutClient()
