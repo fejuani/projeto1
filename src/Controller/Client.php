@@ -33,15 +33,15 @@ switch ($_GET["operation"]) {
     default:
         Uteis::redirect("Operação inválida!!!");
 }
-switch($_GET["exit"]){
-    case "login":
-        loginClient($email, $password);
-        break;
-    case "logout":
-        logoutClient();
-        break;
+// switch($_GET["exit"]){
+//     case "login":
+//         loginClient($email, $password);
+//         break;
+//     case "logout":
+//         logoutClient();
+//         break;
 
-}
+// }
 
 function insertClient()
 {
@@ -82,41 +82,41 @@ function insertClient()
         }
     }
 }
-function loginClient($email, $password)
-{
-    if(!Validation::validateEmail($_POST["email"])){
-        array_push($error, "Email do usuário inválido");
-    }
+// function loginClient($email, $password)
+// {
+//     if(!Validation::validateEmail($_POST["email"])){
+//         array_push($error, "Email do usuário inválido");
+//     }
 
-    if(!Validation::validatePassword($_POST["password"])){
-        array_push($error, "Senha do usuário inválido");
-    }
+//     if(!Validation::validatePassword($_POST["password"])){
+//         array_push($error, "Senha do usuário inválido");
+//     }
 
-        if (count($error) > 0) {
-        Uteis::redirect(message: $error, session_name: "msg_validation_erro");} 
-        else {
-             $client = new Client($email, $password);
-             // Salvaria no banco de dados
-               //$result = ClientDAO::insertClient($client);
-     }
+//         if (count($error) > 0) {
+//         Uteis::redirect(message: $error, session_name: "msg_validation_erro");} 
+//         else {
+//              $client = new Client($email, $password);
+//              // Salvaria no banco de dados
+//                //$result = ClientDAO::insertClient($client);
+//      }
 
-        // if (count($error) > 0) {
-        //     Uteis::redirect(message: $error, session_name: "msg_validation_erro");
-        // } else {
-        //     $client = new Client($name, $phone, $email, $password);
-        //     // Salvaria no banco de dados
-        //     $result = ClientDAO::insertClient($client);
-        //     if ($result) {
-        //         Uteis::redirect(message: "Usuário cadastrado com sucesso!!!", session_name: "msg_confirm");
-        //     } else {
-        //         Uteis::redirect("Não foi possível cadastrar o cliente!!!");
-        //     }
-        // }
-}
-function logoutClient()
-{
+//         // if (count($error) > 0) {
+//         //     Uteis::redirect(message: $error, session_name: "msg_validation_erro");
+//         // } else {
+//         //     $client = new Client($name, $phone, $email, $password);
+//         //     // Salvaria no banco de dados
+//         //     $result = ClientDAO::insertClient($client);
+//         //     if ($result) {
+//         //         Uteis::redirect(message: "Usuário cadastrado com sucesso!!!", session_name: "msg_confirm");
+//         //     } else {
+//         //         Uteis::redirect("Não foi possível cadastrar o cliente!!!");
+//         //     }
+//         // }
+// }
+// function logoutClient()
+// {
 
-}
+// }
 
 function editClient()
 {
