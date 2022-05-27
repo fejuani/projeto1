@@ -26,5 +26,18 @@ class Validation
     {
         return strlen($password) > 6 ;
     }
+    public static function validateProduct(string $product): bool
+    {
+        return strlen($product) > 2 && !is_numeric($product);
+    }
+    public static function validateDescription(string $description): bool
+    {
+        return strlen($description) <=500;
+    }
+    public static function validateValor(float $valor): bool
+    {
+        return preg_match("/^\d*[0-9](\,\d*[0-9])?$/", $valor);
+    
+    }
 }
 

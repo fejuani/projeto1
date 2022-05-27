@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="../Model/images.php">
+    <a href="product.php">
         <button> cadastrar produto</button>
     </a>
 </body>

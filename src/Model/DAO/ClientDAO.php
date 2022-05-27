@@ -27,7 +27,7 @@ class ClientDAO
     public static function findAll()
     {
         $connection = Connection::getConnection();
-        $sql = "select * from client";
+        $sql = "select * from object";
         $stmt = $connection->query($sql);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
@@ -54,6 +54,7 @@ class ClientDAO
         $stmt = $connection->query("select * from client where email=? and password=?");
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
+
 }
 
 

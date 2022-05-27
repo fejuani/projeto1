@@ -19,11 +19,6 @@ if(!empty($files["image"])){
 
 }
 ?>
-<form action="" method="post" enctype="multipart/form-data">
-    <h1>Single Image</h1>
-    <input type="file" name="image">
-    <button>ENVIAR</button>
-</form>
 
 <?php
     if(!empty($files["images"])){
@@ -49,10 +44,5 @@ if(!empty($files["image"])){
 }
 ?>
 
-<form action="" method="post" enctype="multipart/form-data">
-    <h1>More Images</h1>
-    <input type="file"accept="image/jpeg, image/png, image/jpg" name="images[]" multiple>
-    <button>ENVIAR</button>
-</form>
 
 
