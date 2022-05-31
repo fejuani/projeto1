@@ -299,3 +299,15 @@ body{
     height: auto;
     padding: 10px;
 }
+
+
+
+
+.sobre{
+    background: rgb(219, 196, 162);
+    width: 700px;
+    margin-left: 400px;
+    height:800px ;
+    margin-top: 150px;
+    padding-left: 10px;
+}
